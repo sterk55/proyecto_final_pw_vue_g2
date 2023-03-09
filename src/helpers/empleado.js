@@ -51,3 +51,50 @@ const obtenerVehiculoPlacaAxios = async (placa) => {
     console.log(data)
     return data
 }
+//----------------------------------------------------------------
+export const buscarVehiculoIdFachada=async(numero)=>{
+    return await  buscarVehiculoPorId(numero)
+}
+
+export const obtenerPorApellidoFachada = async (apellido) => {
+    return await obtenerPorApellido(apellido);
+}
+
+export const actualizarVehiculoFachada = (id, body) => {
+    actualizarVehiculo(id, body);
+}
+
+export const borrarVehiculoPorIdFachada = (id) => {
+    borrarVehiculoPorId(id);
+}
+export const buscarEmplApe=async(apellido)=>{
+    return await buscarEmplApellAxios(apellido)
+}
+
+//Metodos de consumos CRUD
+const obtenerPorApellido = async (apellido) => {
+    const data = axios.get(`http://localhost:8085/API/Renta/V1/clientes/${apellido}`).then(r => r.data)
+    console.log(data)
+    return data;
+}
+
+
+const actualizarVehiculo = (id, body) => {
+    axios.put(`http://localhost:8085/API/Renta/V1/vehiculos/${id}`,body).then(r => r.data)
+}
+
+
+const borrarVehiculoPorId = (id) => {
+    axios.delete(`http://localhost:8085/API/Renta/V1/vehiculos/${id}`).then(r => r.data)
+}
+
+const buscarVehiculoPorId = async (id) => {
+    const data = axios.get(`http://localhost:8085/API/Renta/V1/vehiculos/id/${id}`).then(r => r.data)
+    console.log(data)
+    return data
+}
+const buscarEmplApellAxios=async(apellido)=>{
+    const data = axios.get(`http://localhost:8085/API/Renta/V1/clientes/${apellido}`).then(r=>r.data)
+    console.log(data)
+    return data
+}

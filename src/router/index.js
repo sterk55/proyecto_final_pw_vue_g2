@@ -17,7 +17,9 @@ const routes = [
   {path:'/buscar/vehiculo/placa',component:()=>import(/*webpackChunkName:"buscarV"*/ '../views/BuscarVehiculoPlaca')},
   {path:'/vehiculo/sinReserva',component:()=>import(/*webpackChunkName:"vehiculoSR"*/ '../views/VehiculoSinReserva')},
   {path:'/reservas',component:()=>import(/*webpackChunkName:"reservas"*/ '../views/ReporteReserva')},
-
+  {path:'/empleados/actualizar/vehiculo',component:()=>import(/*webpackChunkName:"reservas"*/ '../views/ActualizarVehiculo.vue')},
+  {path:'/clientes/actualizar',component:()=>import(/*webpackChunkName:"clientesActualizar"*/ '../views/ActualizarClienteC')},
+  {path:'/vehiculosVIP',component:()=>import(/*webpackChunkName:"vehiculosVIP"*/ '../views/ReportesVehiculosVip')},
 
 ]
 

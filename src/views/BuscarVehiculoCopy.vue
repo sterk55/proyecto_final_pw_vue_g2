@@ -293,6 +293,7 @@
           <td>{{ auto.anioFablicacion }}</td>
           <td>{{ auto.disponible }}</td>
           <td>${{ auto.valorDia }}.00</td>
+
         </tr>
       </tbody>
     </table>
@@ -308,6 +309,9 @@
   import NavarCliente from '../components/NavarCliente.vue';
 import { obtenerVehiculos } from "../helpers/cliente.js";
 export default {
+  props:{
+    idV: null,
+  },
   components: {
     NavarCliente
     

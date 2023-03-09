@@ -16,6 +16,9 @@
         <li class="nav-item">
           <router-link class="nav-link active text-dark" aria-current="page" to="/buscar/vehiculo">Buscar vehículo</router-link> 
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link active text-dark" aria-current="page" to="/clientes/actualizar">Actualizar Cliente</router-link>
+        </li>
       </ul>
     </div>
   </div>

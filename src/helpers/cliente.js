@@ -37,3 +37,22 @@ const reservarVehiculoAxios=async(reser)=>{
     console.log(data)
     return data
 }
+export const actualizarClienteFachada = async (id, body) => {
+    //return await obtenerEmpleadoAPI(id);
+    await actualizarCliente(id,body);
+}
+
+export const buscarClienteCedulaFachada=async(cedula)=>{
+    return await buscarClienteCedula(cedula)
+}
+
+const actualizarCliente=async(id, body)=>{
+    console.log('actualiza fachada: id '+id)
+    axios.put(`http://localhost:8085/API/Renta/V1/clientes/${id}`,body).then(r => r.data)
+
+}
+const buscarClienteCedula=async(cedula)=>{
+    const data = axios.get(`http://localhost:8085/API/Renta/V1/clientes/${cedula}`).then(r=>r.data)
+    console.log(data)
+    return data
+}
