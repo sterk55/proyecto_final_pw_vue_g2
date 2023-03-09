@@ -7,6 +7,7 @@ const routes = [
   {path:'/buscar/cliente',component:()=>import(/*webpackChunkName:"buscarC"*/ '../views/BuscarCliente')},
   {path:'/retiro/vehiculo',component:()=>import(/*webpackChunkName:"retiroV"*/ '../views/RetirarVehiculo')},
   {path:'/clienteVIP',component:()=>import(/*webpackChunkName:"clienteVIP"*/ '../views/ReportesClientesVIP')},
+  {path:'/vehiculosVIP',component:()=>import(/*webpackChunkName:"vehiculosVIP"*/ '../views/ReportesVehiculosVip')},
   {path:'/cliente',component:()=>import(/*webpackChunkName:"cliente"*/ '../components/NavarCliente')},
   {path:'/empleado',component:()=>import(/*webpackChunkName:"empleado"*/ '../components/NavarEmpleado')},
   {path:'/reporte',component:()=>import(/*webpackChunkName:"reporte"*/ '../components/NavarReporte')},

@@ -6,6 +6,9 @@ export const registrarEmpl=async(empl)=>{
 export const buscarEmpl=async(cedula)=>{
     return await buscarEmplAxios(cedula)
 } 
+export const buscarEmplApe=async(apellido)=>{
+    return await buscarEmplApellAxios(apellido)
+} 
 export const buscarVehiculoReservado=async(numero)=>{
     return await buscarVehiculoReservadoAxios(numero)
 } 
@@ -27,6 +30,11 @@ const registrarEmplAxios=async(empl)=>{
 }
 const buscarEmplAxios=async(cedula)=>{
     const data = axios.get(`http://localhost:8085/API/Renta/V1/clientes/${cedula}`).then(r=>r.data)
+    console.log(data)
+    return data
+}
+const buscarEmplApellAxios=async(apellido)=>{
+    const data = axios.get(`http://localhost:8085/API/Renta/V1/clientes/${apellido}`).then(r=>r.data)
     console.log(data)
     return data
 }

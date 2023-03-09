@@ -13,6 +13,10 @@
         </li>
         <li class="nav-item">
           <router-link class="nav-link active text-dark" aria-current="page" to="/reservas">Reportes Reserva</router-link> 
+        </li >
+        <li class="nav-item">
+          <router-link class="nav-link active text-dark" aria-current="page" to="/vehiculosVip">Vehiculos VIP</router-link> 
+
         </li>
       </ul>
     </div>

@@ -5,7 +5,7 @@
       <fieldset>
         <legend>Buscar Cliente</legend>
         <div class="input-group flex-nowrap">
-          <span class="input-group-text" id="idCedula">Cédula: </span>
+          <span class="input-group-text" id="idCedula">Apellido: </span>
           <input
             type="text"
             class="form-control"
@@ -24,6 +24,7 @@
         <table class="table">
           <thead class="table-dark">
             <tr>
+
               <th scope="col">id</th>
               <th scope="col">Cédula</th>
               <th scope="col">Nombre</th>
@@ -49,10 +50,11 @@
 </template>
 
 <script>
-import { buscarEmpl } from "../helpers/empleado.js";
+import {buscarEmplApe, buscarEmpl } from "../helpers/empleado.js";
 import NavarEmpleado from "../components/NavarEmpleado.vue";
 export default {
   components: {
+
     NavarEmpleado,
   },
   data() {
@@ -71,6 +73,7 @@ export default {
   },
   methods: {
     async buscar() {
+      console.log(this.apellido);
       const data = await buscarEmpl(this.cedula);
       if (data == "") {
         this.texto = "No hay resultados diponible para su busqueda";
